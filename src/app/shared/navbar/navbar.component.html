@@ -1,0 +1,16 @@
+<header class="header">
+    <div class="container-logo">
+        <img src="../../../assets/myAvatar.png" alt="Avatar">
+        <a href="home" class="logo">Maicol Aponte</a>
+    </div>
+    <button (click)="abrirNav()">
+        <i [ngClass]="icon" id="menu-icon"></i>
+    </button>
+    <nav class="navbar" data-animation="center">
+        @for (item of items; track $index) {
+            <a [href]="item.url"><i [ngClass]="item.icon"></i> {{item.label}}</a>
+        }
+    </nav>
+</header>
+
+
